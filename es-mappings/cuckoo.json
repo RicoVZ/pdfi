@@ -1,0 +1,223 @@
+{
+    "mappings": {
+        "report": {
+            "properties": {
+                "api_call": {
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "times": {
+                            "type": "long"
+                        }
+                    }
+                },
+                "binary_name": {
+                    "type": "string"
+                },
+                "cuckoo_options": {
+                    "type": "string"
+                },
+                "cuckoo_version": {
+                    "type": "string"
+                },
+                "date": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss"
+                },
+				"vt_matched": {
+					"type": "long"
+				},
+                "dir_created": {
+                    "type": "string"
+                },
+                "dir_enumerated": {
+                    "type": "string"
+                },
+                "dir_removed": {
+                    "type": "string"
+                },
+                "dll_loaded": {
+                    "type": "string"
+                },
+                "domain": {
+                    "properties": {
+                        "domain": {
+                            "type": "string"
+                        },
+                        "ip": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "file_type": {
+                    "type": "string"
+                },
+                "file_deleted": {
+                    "type": "string"
+                },
+                "file_opened": {
+                    "type": "string"
+                },
+                "file_read": {
+                    "type": "string"
+                },
+                "file_written": {
+                    "type": "string"
+                },
+                "http": {
+                    "properties": {
+                        "body": {
+                            "type": "string"
+                        },
+                        "host": {
+                            "type": "string"
+                        },
+                        "method": {
+                            "type": "string"
+                        },
+                        "path": {
+                            "type": "string"
+                        },
+                        "uri": {
+                            "type": "string"
+                        },
+                        "user-agent": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "http_ex": {
+                    "properties": {
+                        "dport": {
+                            "type": "long"
+                        },
+                        "dst": {
+                            "type": "string"
+                        },
+                        "host": {
+                            "type": "string"
+                        },
+                        "request": {
+                            "type": "string"
+                        },
+                        "response": {
+                            "type": "string"
+                        },
+                        "src": {
+                            "type": "string"
+                        },
+                        "uri": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "ip": {
+                    "type": "string"
+                },
+                "machine_info": {
+                    "properties": {
+                        "label": {
+                            "type": "string"
+                        },
+                        "manager": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "md5": {
+                    "type": "string"
+                },
+                "mutex": {
+                    "type": "string"
+                },
+                "processed": {
+                    "type": "boolean"
+                },
+                "process": {
+                    "properties": {
+                        "command_line": {
+                            "type": "string"
+                        },
+                        "process_name": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "regkey_deleted": {
+                    "type": "string"
+                },
+                "regkey_opened": {
+                    "type": "string"
+                },
+                "regkey_written": {
+                    "type": "string"
+                },
+                "regkey_read": {
+                    "type": "string"
+                },
+                "score": {
+                    "type": "double"
+                },
+                "sha1": {
+                    "type": "string"
+                },
+                "sha256": {
+                    "type": "string"
+                },
+                "sha512": {
+                    "type": "string"
+                },
+                "signature": {
+                    "properties": {
+                        "description": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "severity": {
+                            "type": "long"
+                        }
+                    }
+                },
+                "string": {
+                    "type": "string"
+                },
+                "tcp": {
+                    "properties": {
+                        "dport": {
+                            "type": "long"
+                        },
+                        "dst": {
+                            "type": "string"
+                        },
+                        "src": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "udp": {
+                    "properties": {
+                        "dport": {
+                            "type": "long"
+                        },
+                        "dst": {
+                            "type": "string"
+                        },
+                        "src": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "dead_host": {
+                    "type": "string"
+                }
+            }
+
+        }
+    }
+}

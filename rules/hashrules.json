@@ -1,0 +1,215 @@
+{
+	"info": {
+		"type": "hash"
+	},
+	"rules": {
+		"cuckoo_score": [
+			{
+				"rules": ["0.1-0.5"],
+				"score": 0.1
+			},
+			{
+				"rules": ["0.6-1.0"],
+				"score": 0.3
+			},
+			{
+				"rules": ["1.1-2.0"],
+				"score": 0.8
+			},
+			{
+				"rules": ["2.1-3.0"],
+				"score": 1.0
+			},
+			{
+				"rules": ["3.1-4.0"],
+				"score": 1.5
+			},
+			{
+				"rules": ["4.1-15.0"],
+				"score": 4.0
+			}
+		],
+		"signature_severity": [
+			{
+				"rules": [3],
+				"score": 2.0
+			},
+			{
+				"rules": [4,5],
+				"score": 1.1
+			}
+		],
+		"vt_score": [
+			{
+				"rules": ["1-4"],
+				"score": 0.3
+			},
+			{
+				"rules": ["4-10"],
+				"score": 1.0
+			},
+			{
+				"rules": ["10-100"],
+				"score": 3.0
+			}
+		],
+		"signature_name": [
+			{
+				"rules": ["raises_exception", "modifies_files", "ransomware_files", "antivirus_virustotal"],
+				"score": 2.0
+			}
+		],
+		"ip_in_subnet": [
+			{
+				"rules": ["128.0.1.0/24", "8.8.8.0/24"],
+				"score": 0.2
+			},
+			{
+				"rules": ["67.9.0.0/17"],
+				"score": 1.5,
+				"group_id": 15
+			}
+		],
+		"ip_in_range": [
+			{
+				"rules": ["144.241.11.10-144.241.11.235"],
+				"score": 0.8
+			},
+			{
+				"rules": ["8.8.8.0-8.8.8.255"],
+				"score": 1.0
+			}
+		],
+		"file_opened": [
+			{
+				"rules": ["*kees.txt", "*JKsjfs.dat", "%REG%$w[A-Z, 0-9]{14}$"],
+				"score": 0.4
+			}
+		],
+		"tcp_port": [
+			{
+				"rules": [23,21,20,80],
+				"score": 0.5
+			}
+		],
+		"udp_port": [
+			{
+				"rules": [21833, 62732, 53],
+				"score": 0.5
+			}
+		],
+		"3rd_party_blacklist": [
+			{
+				"rules":["C&C"],
+				"score": 2.0
+			}
+		],
+		"registry_key_opened": [
+			{
+				"rules": ["HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion*", "!REGEX![a-zA-Z]"],
+				"score": 0.3
+			}
+		],
+		"http_path": [
+			{
+				"rules": ["/wp-*", "/Content*"],
+				"score": 0.5
+			}
+		],
+		"http_user_agent": [
+			{
+				"rules": ["RookIE/*", "Mazilla/*", "Mozilla*"],
+				"score": 0.01
+			}
+		],
+		"dead_host_amount": [
+			{
+				"rules": ["1-2"],
+				"score": 10.0
+			},
+			{
+				"rules": ["3-1000"],
+				"score": 20.0
+			}
+		],
+		"file_deleted": [
+			{
+				"rules": ["kaas.txt", "koek.jpg", "!REGEX![a-zA-Z]"],
+				"score": 5.0
+			}
+			],
+		"file_written": [
+			{
+				"rules": ["kaas.txt", "koek.jpg", "!REGEX![a-zA-Z]"],
+				"score": 1.0
+			}
+		],
+		"file_read": [
+			{
+				"rules": ["kaas.txt", "koek.jpg", "!REGEX![a-zA-Z]"],
+				"score": 0.5
+			}
+		],
+		"dir_created": [
+			{
+				"rules": ["C:/Downloads/Hoedje","!REGEX![a-zA-Z]"],
+				"score": 0.2
+			}
+		],
+		"dir_enumerated": [
+			{
+				"rules": ["C:/Downloads/Hoedje","!REGEX![a-zA-Z]"],
+				"score": 0.1
+			}
+		],
+		"dir_removed": [
+			{
+				"rules": ["C:/Downloads/Hoedje","!REGEX![a-zA-Z]"],
+				"score": 0.8
+			}
+		],
+		"mutex": [
+			{
+				"rules": ["evilstuff.exe", "!REGEX![a-zA-Z]"],
+				"score": 0.8
+			}
+		],
+		"registry_key_deleted": [
+			{
+				"rules": ["HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion*", "!REGEX![a-zA-Z]"],
+				"score": 0.9
+			}
+		],
+		"registry_key_written": [
+			{
+				"rules": ["HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion*", "!REGEX![a-zA-Z]"],
+				"score": 0.3
+			}
+		],
+		"string": [
+			{
+				"rules": ["nee", "ja", "beenham", "!REGEX![a-zA-Z]"],
+				"score": 0.1
+			}
+		],
+		"process_name": [
+			{
+				"rules": ["nee", "ja", "beenham", "!REGEX![a-zA-Z]"],
+				"score": 0.8
+			}
+		],
+		"command_line": [
+			{
+				"rules": ["ipconfig", "ping", "beenham", "!REGEX![a-zA-Z]"],
+				"score": 0.8
+			}
+		],
+		"registry_key_read": [
+			{
+				"rules": ["HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion*", "!REGEX![a-zA-Z]"],
+				"score": 0.8
+			}
+		]
+
+	}
+}

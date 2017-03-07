@@ -1,0 +1,13 @@
+{
+   "third_party_blacklist":{
+      "mappings":{
+         "command_and_control":{
+            "properties":{
+               "location":{
+                  "type":"string"
+               }
+            }
+         }
+      }
+   }
+}

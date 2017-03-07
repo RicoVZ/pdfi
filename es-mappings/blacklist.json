@@ -1,0 +1,30 @@
+{
+  "mappings": {
+    "blacklist": {
+      "properties": {
+        "last_change": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "reason": {
+          "properties": {
+            "signature_name": {
+              "type": "string"
+            },
+            "data": {
+              "type": "string"
+            }
+          }
+        },
+        "score": {
+          "type": "float"
+        }
+      }
+    },
+    "_default_": {
+      "_timestamp": {
+        "enabled": true
+      }
+    }
+  }
+}

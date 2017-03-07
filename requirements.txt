@@ -1,0 +1,6 @@
+elasticsearch
+requests
+netaddr
+setproctitle
+psutil
+flask
